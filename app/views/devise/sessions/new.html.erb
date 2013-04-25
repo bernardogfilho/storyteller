@@ -1,0 +1,38 @@
+<div class="wrapper">
+	
+	<div class="logo--big">
+		<b>Story</b><i>Teller</i>
+	</div>
+
+<div class="sign-in">
+	
+	<div class="sign-in__title">
+		Login
+	</div>
+
+	<div class="sign-in__form">
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+		  <%= f.email_field :email, :class => "sign-in__input", :placeholder => "Email" %>
+
+		  <%= f.password_field :password, :class => "sign-in__input", :placeholder => "Senha" %>
+
+		  <% if devise_mapping.rememberable? -%>
+		   <div class="sign-in__remember-me">
+		   	<%= f.check_box :remember_me %> <%= f.label :remember_me, "Lembrar de mim" %>
+		   </div>
+		  <% end -%>
+
+		
+
+	</div>
+  <div class="sign-in__footer">
+  	<%= f.submit "Entrar", :class => "sign-in__submit" %>
+  </div>
+	<% end %>
+</div>
+
+</div>
+
+<!--
+<%= render :partial => "devise/shared/links" %>
+!-->

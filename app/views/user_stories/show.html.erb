@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Actor:</b>
+  <%= @user_story.actor %>
+</p>
+
+<p>
+  <b>Action:</b>
+  <%= @user_story.action %>
+</p>
+
+<p>
+  <b>Goal:</b>
+  <%= @user_story.goal %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @user_story.project %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_user_story_path(@project, @user_story) %> |
+<%= link_to 'Back', project_user_stories_path(@project) %>

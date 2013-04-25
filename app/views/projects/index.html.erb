@@ -1,0 +1,25 @@
+<%= render "partials/top_bar" %>
+
+<%= render "partials/page_header"%>
+
+<section class="projects">
+  <%= link_to 'Criar Novo Projeto', new_project_path, :class=> "btn--big" %>
+  <ul class="projects__list">
+    <% @projects.each do |project| %>
+    <li class="projects__project">
+      <div class="projects__box-up">
+        <h1 class="projects__project-title"><%= project.title %></h1>
+        <h1 class="projects__project-subtitle"><%= project.description %></h1>
+      </div>
+      <div class="projects__box-down">
+        <%= link_to 'Visualizar', project, :class=> "btn" %>
+        <%= link_to 'Editar', edit_project_path(project), :class=> "btn" %>
+        <%= link_to 'Excluir', project, :class=> "btn--red", method: :delete, data: { confirm: 'Você tem certeza?' } %>
+      </div>
+    </li>
+    <% end %>
+  </ul>  
+</section>
+
+<br />
+

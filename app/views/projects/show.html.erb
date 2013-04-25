@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="project-info">
+	<div class="title-box">
+	  <%= @project.title %>
+	</div>
+	<ul class="user-stories-list">
+		<% @project.user_stories.each do |us| %>
+			<li>
+				Como um <strong><%= us.actor %></strong> eu quero <strong><%= us.action %></strong> para <strong><%= us.goal %></strong>.
+			</li>
+		<% end %>	
+	</ul>
+</div>
+
+<br>
+
+<%= link_to 'Editar Projeto', edit_project_path(@project) %> |
+<%= link_to 'Voltar', projects_path %>

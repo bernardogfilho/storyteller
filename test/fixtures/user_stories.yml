@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  actor: MyString
+  action: MyText
+  goal: MyText
+  project: 
+
+two:
+  actor: MyString
+  action: MyText
+  goal: MyText
+  project: 
