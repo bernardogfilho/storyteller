@@ -18,7 +18,7 @@ class ProjectsController < ApplicationController
   def show
     @user = current_user
     @project = @user.projects.find(params[:id])
-
+    @page_title = @project.title
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @project }
