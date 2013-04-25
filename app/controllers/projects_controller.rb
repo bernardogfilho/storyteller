@@ -48,8 +48,8 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @user = current_user
-    @project = @user.projects.build(params[:id])
-
+    @project = @user.projects.build(params[:project])
+    
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }

@@ -15,7 +15,6 @@ group :assets do
   gem 'bourbon'
   gem 'neat'
 
-
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
@@ -28,7 +27,6 @@ gem 'jquery-rails'
 gem 'devise'
 
 group :development, :test do
-  gem "better_errors"
   gem 'sextant'
 	gem 'sqlite3'
 end

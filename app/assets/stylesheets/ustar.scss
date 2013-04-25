@@ -175,7 +175,8 @@ ul {
 
 .projects__project {
 	@include span-columns(4);
-	@include omega(4n);
+	@include omega(3n);
+	margin-bottom: 2em;
 }
 
 .projects__box-up {
