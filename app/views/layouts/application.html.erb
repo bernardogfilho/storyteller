@@ -13,20 +13,17 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "UStar" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "StoryTeller" %></title>
 
     <%= stylesheet_link_tag "application" %>
     <!-- Google Web Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic' rel='stylesheet' type='text/css'>
-
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,200italic,400italic' rel='stylesheet' type='text/css'>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
 
-<!--       <% if user_signed_in? %>
-      Você está logado como <%= current_user.email %>. <%= link_to "Fechar Sessão", destroy_user_session_path, :method => :delete %>
-      <% end %> -->
+      <%= render "partials/top_bar" %>
       <%= yield %>
 
     

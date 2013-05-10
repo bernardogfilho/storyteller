@@ -1,35 +1,30 @@
-<div class="wrapper">
-	
-	<div class="logo--big">
-		<b>Story</b><i>Teller</i>
-	</div>
+<div class="sign-in-wrapper">
 
-<div class="sign-in">
-	
-	<div class="sign-in__title">
-		Login
-	</div>
+	<div class="sign-in">
 
-	<div class="sign-in__form">
+		<h3>Welcome to StoryTeller</h3>
+		<p>Please, enter your credentials to access your account.</p>
+
 		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 		  <%= f.email_field :email, :class => "sign-in__input", :placeholder => "Email" %>
 
-		  <%= f.password_field :password, :class => "sign-in__input", :placeholder => "Senha" %>
+		  <%= f.password_field :password, :class => "sign-in__input", :placeholder => "Password" %>
 
 		  <% if devise_mapping.rememberable? -%>
 		   <div class="sign-in__remember-me">
-		   	<%= f.check_box :remember_me %> <%= f.label :remember_me, "Lembrar de mim" %>
+		   	<%= f.check_box :remember_me %> <%= f.label :remember_me, "Remember Me" %>
 		   </div>
-		  <% end -%>
+		  <% end %>
 
-		
-
+	  	<%= f.submit "Sign in", :class => "sign-in__submit" %>
+		<% end %>
 	</div>
-  <div class="sign-in__footer">
-  	<%= f.submit "Entrar", :class => "sign-in__submit" %>
-  </div>
-	<% end %>
-</div>
+
+	<aside class="dont-have-account">
+		<h3>Don't have an account?</h3>
+		<p>Create a free account in less than a minute.</p>
+		<%= link_to "Sign Up", new_user_registration_path, :class => "sign-up-button" %>
+	</aside>
 
 </div>
 
