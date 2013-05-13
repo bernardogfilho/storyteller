@@ -1,9 +1,12 @@
-<%= render "partials/top_bar" %>
+<section class="new-project">
 
-<%= render "partials/page_header"%>
-
-<div class="wrapper">
-	<%= render 'form' %>
-	<%= link_to 'Voltar', projects_path %>
-</div>
+	<aside class="aside-info">
+		<h3>Add New Project</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<%= link_to 'Back', projects_path %>
+	</aside>
+	<div class="new-project__form">
+		<%= render 'form' %>
+	</div>
+</section>
 

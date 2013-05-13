@@ -1,10 +1,7 @@
-<%= render "partials/top_bar" %>
-
-<%= render "partials/page_header" %>
-
 <p id="notice"><%= notice %></p>
 
 
+<div class="wrapper">	
 <div class="project-info">
 	<div class="title-box">
 	  <%= @project.title %>
@@ -18,7 +15,11 @@
 	</ul>
 </div>
 
-<br>
-
 <%= link_to 'Editar Projeto', edit_project_path(@project) %> |
 <%= link_to 'Voltar', projects_path %>
+
+</div>
+
+
+<br>
+
