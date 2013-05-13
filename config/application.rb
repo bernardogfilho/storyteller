@@ -56,7 +56,7 @@ module UStar
     # Enable the asset pipeline
     config.assets.enabled = true
 
-    config.assets.precompile += %w( *.js *.css )
+    config.assets.precompile += ['font-awesome/css/font-awesome.min.css']
 
     config.assets.initialize_on_precompile = false
 
