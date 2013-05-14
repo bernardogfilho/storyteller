@@ -253,6 +253,7 @@ a {
 .top-bar {
 	min-width: 68em;
 	background: $color_dark;
+	margin-bottom: 4em;
 	width: 100%;
 	height: em(80);
 	line-height: em(80);
@@ -519,4 +520,12 @@ a {
 .label--dark {
 	@extend .label;
 	background: tint($color_dark, 10%);
+}
+
+
+// Devise
+
+.layout-content {
+	@include span-columns(9);
+	@extend %box;
 }
