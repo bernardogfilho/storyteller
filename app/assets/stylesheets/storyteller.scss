@@ -29,7 +29,7 @@ a {
 // Mixins
 
 @mixin color-btn($font-size: 14px, $bg: $color_dark, $float: left) {
-	border-radius: 3px;
+	border-radius: 2px;
 	display: inline-block;
 	font-size: $font-size;
 	margin: auto 2px;
@@ -50,6 +50,7 @@ a {
 			0 3px 0 1px shade($bg, 30%),
 			0 0 0 1px shade($bg, 30%);
 	&:hover {
+		text-decoration: none;
 		background: tint($bg, 10%);
 		border: 1px solid tint($bg, 20%);
 		border-left: 0;
@@ -171,7 +172,12 @@ a {
 	width: 55%;
 	display: inline-block;
 	float: left;
-	height: 2em;
+	min-height: 2em;
+	resize: none;
+	max-height: 8em;
+	border: 0;
+	border: 1px solid shade($color_white, 15%);
+	border-radius: 3px;
 }
 
 .form-horizontal__info {
@@ -491,4 +497,26 @@ a {
 
 .ico {
 	font-family: "FontAwesome";
+}
+
+.nav-list--right {
+	float: right;
+	margin: 0;
+	padding: 0;
+	a {
+		color: #fff;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	li {
+		margin-left: 1em;
+		list-style: none;
+		display: inline-block;
+	}
+}
+
+.label--dark {
+	@extend .label;
+	background: tint($color_dark, 10%);
 }

@@ -1,9 +1,5 @@
 class ChangeDescriptionTypeInProjects < ActiveRecord::Migration
-  def up
+  def change
   	change_column :projects, :description, :string
-  end
-
-  def down
-  	change_column :projects, :description, :text
   end
 end

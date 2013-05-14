@@ -1,6 +1,12 @@
-<div class="wrapper">
-	<%= render 'form' %>
+<section class="new-project">
 
-	<%= link_to 'Show', @project %> |
-	<%= link_to 'Back', projects_path %>
-</div>
+	<aside class="aside-info">
+		<h3>Edit <%= @project.title %></h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<%= link_to 'Back', projects_path %>
+	</aside>
+	<div class="new-project__form">
+		<%= render 'form' %>
+	</div>
+</section>
+

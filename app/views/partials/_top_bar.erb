@@ -14,9 +14,15 @@
       <ul class="top-bar__session">
         <li>Welcome, <%= current_user.email %></li>
         <li class="top-bar__session-links">
-        	<a href="#">Settings</a>
-        	<%= link_to "Logout", destroy_user_session_path, :method => "delete" %>
+        	<a href="#"> <i class="icon-cog"></i> Account Settings</a>
+        	<%= link_to '<i class="icon-signout"></i>Logout'.html_safe, destroy_user_session_path, :method => "delete" %>
         </li>
+      </ul>
+      <% else %>
+      <ul class="nav-list--right">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Help</a></li>
+        <li><%= link_to "Sign Up", new_user_registration_path, :class => "label--dark" %></li>
       </ul>
       <% end %>
     </div>

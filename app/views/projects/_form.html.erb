@@ -8,10 +8,17 @@
     </div>
     <div class="form-horizontal__field">
       <div class="form-horizontal__label">
-        <%= f.label :description %>
+        <%= f.label :short_description %>
       </div>
-      <%= f.text_field :description, :class => "form-horizontal__input" %>
-      <span class="form-horizontal__info">A short description of the project.</span>
+      <%= f.text_field :short_description, :class => "form-horizontal__input" %>
+      <span class="form-horizontal__info">A short description of the project (optional).</span>
+    </div>
+    <div class="form-horizontal__field">
+      <div class="form-horizontal__label">
+        <%= f.label :full_description %>
+      </div>
+      <%= f.text_area :full_description, :class => "form-horizontal__input" %>
+      <span class="form-horizontal__info">Full description of the project (optional).</span>
     </div>
     <div class="form-horizontal__field--submit">
 
