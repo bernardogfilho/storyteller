@@ -1,22 +1,35 @@
+<section class="project-view">
+	<aside class="aside-info">
+		<h3><%= @project.title %></h3>
+		<p><%= @project.description %></p>
+		<%= link_to 'Edit Project', edit_project_path(@project) %> |
+		<%= link_to 'Back', projects_path %>
+	</aside>
 
-<div class="wrapper">	
-<div class="project-info">
-	<div class="title-box">
-	  <%= @project.title %>
+	<div class="project-view__us">
+		<table class="project-view__us-table">
+			<% @project.user_stories.each do |us| %>
+			<tr>
+				<td>As a <strong><%= us.actor %></strong></td>
+				<td>I <strong><%= us.action %></strong></td>
+				<td>So <strong><%= us.goal %></strong></td>
+				<td>
+					<div class="project__action-buttons">
+            			<%= link_to ('<i class="icon-search"></i>').html_safe, project_user_story_path(us), :class => "project__action-button" %>
+            			<%= link_to ('<i class="icon-pencil"></i>').html_safe, edit_project_user_story_path(us), :class => "project__action-button" %>
+			            <%= link_to ('<i class="icon-trash"></i>').html_safe, project_user_story_path(us), :method => "delete", :confirm => "Are you sure?", :class => "project__action-button" %>
+
+					</div>
+				</td>
+			</tr>
+			<% end %>
+		</table>
 	</div>
-	<ul class="user-stories-list">
-		<% @project.user_stories.each do |us| %>
-			<li>
-				Como um <strong><%= us.actor %></strong> eu quero <strong><%= us.action %></strong> para <strong><%= us.goal %></strong>.
-			</li>
-		<% end %>	
-	</ul>
-</div>
 
-<%= link_to 'Editar Projeto', edit_project_path(@project) %> |
-<%= link_to 'Voltar', projects_path %>
 
-</div>
+
+</section>
+
 
 
 <br>

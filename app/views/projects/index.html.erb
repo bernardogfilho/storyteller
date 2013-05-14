@@ -26,7 +26,13 @@
         <td><%= project.description %></td>
         <td>
           <%= link_to project do %>
-            <span class="label"><%= project.user_stories.count %> User Stories</span>
+            <span class="label">
+              <% if project.user_stories.count > 0 %>
+              <%= pluralize(project.user_stories.count, "user story") %>
+              <% else %>
+              no user stories
+              <% end %>
+            </span>
           <% end %>
         </td>
         <td>

@@ -1,8 +1,8 @@
 <div class="sign-in-wrapper">
 
 	<div class="sign-in">
-
-		<h3>Welcome to StoryTeller</h3>
+		
+		<h3><i class="icon-lock"></i> Sign in</h3>
 		<p>Please, enter your credentials to access your account.</p>
 
 		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
@@ -19,13 +19,6 @@
 	  	<%= f.submit "Sign in", :class => "sign-in__submit" %>
 		<% end %>
 	</div>
-
-	<aside class="dont-have-account">
-		<h3>Don't have an account?</h3>
-		<p>Create a free account in less than a minute.</p>
-		<%= link_to "Sign Up", new_user_registration_path, :class => "sign-up-button" %>
-	</aside>
-
 </div>
 
 <!--
