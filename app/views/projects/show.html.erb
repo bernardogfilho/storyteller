@@ -22,10 +22,8 @@
 				<td>So <strong><%= us.goal %></strong></td>
 				<td>
 					<div class="project__action-buttons">
-            			<%= link_to ('<i class="icon-search"></i>').html_safe, project_user_story_path(us), :class => "project__action-button" %>
-            			<%= link_to ('<i class="icon-pencil"></i>').html_safe, edit_project_user_story_path(us), :class => "project__action-button" %>
-			            <%= link_to ('<i class="icon-trash"></i>').html_safe, project_user_story_path(us), :method => "delete", :confirm => "Are you sure?", :class => "project__action-button" %>
-
+      			<%= link_to ('<i class="icon-pencil"></i>').html_safe, edit_project_user_story_path(@project, us), :class => "project__action-button" %>
+            <%= link_to ('<i class="icon-trash"></i>').html_safe, project_user_story_path(@project, us), :method => "delete", :confirm => "Are you sure?", :class => "project__action-button" %>
 					</div>
 				</td>
 			</tr>
