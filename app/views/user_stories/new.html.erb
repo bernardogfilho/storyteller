@@ -1,6 +1,10 @@
-
-<h1>Criar História de Usuário</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Voltar', project_user_stories_path %>
+<section class="new-user-story">
+	<aside class="aside-info">
+		<h3>Add New User Story</h3>
+		<p>"As an (actor), I want to (action), so/then (goal)."</p>
+		<%= link_to 'Back', project_path(@project) %>
+	</aside>
+	<div class="new-user-story__form">
+		<%= render 'form' %>
+	</div>
+</section>

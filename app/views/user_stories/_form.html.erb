@@ -11,19 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :actor, "Como um:" %><br />
-    <%= f.text_field :actor %>
+  <div class="form-horizontal__field">
+    <div class="form-horizontal__label">
+      <%= f.label :actor %>
+    </div>
+    <%= f.text_field :actor, :class => "form-horizontal__input" %>
+    <span class="form-horizontal__info">
+      Who performs the action of the story?
+    </span>
   </div>
-  <div class="field">
-    <%= f.label :action, "Eu quero:" %><br />
-    <%= f.text_area :action %>
+
+  <div class="form-horizontal__field">
+    <div class="form-horizontal__label">
+      <%= f.label :action %>
+    </div>
+    <%= f.text_field :action, :class => "form-horizontal__input" %>
+    <span class="form-horizontal__info">
+      What the actor needs to complete the objective.
+    </span>
   </div>
-  <div class="field">
-    <%= f.label :goal, "Para:" %><br />
-    <%= f.text_area :goal %>
+  <div class="form-horizontal__field">
+    <div class="form-horizontal__label">
+      <%= f.label :goal%>      
+    </div>
+    <%= f.text_field :goal, :class => "form-horizontal__input" %>
+    <span class="form-horizontal__info">
+      Where the story takes the actor? Why it's relevant?
+    </span>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-horizontal__field--submit">
+    <%= f.submit "Create", :class => "form-horizontal__submit" %>
   </div>
 <% end %>

@@ -491,6 +491,15 @@ a {
 	}
 
 
+.new-user-story {
+	@extend .wrapper;
+}
+
+	.new-user-story__form {
+		@include span-columns(9);
+		@extend %box;
+		padding: 2em 1em;
+	}
 
 .aside-info {
 	@include span-columns(3);
