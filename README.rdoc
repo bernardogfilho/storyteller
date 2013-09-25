@@ -1,3 +1,8 @@
+==StoryTeller
+
+This app is hosted on Heroku. Check it out: http://storyteller-beta.herokuapp.com
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
